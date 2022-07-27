@@ -1,22 +1,21 @@
 <?php
-
-$conta1 = [
-    'titular' => 'Erick',
-    'saldo' => 10000
+$contasCorrentes = [
+    12345678910 => [
+        'titular' => 'Erick',
+        'saldo' => 10000
+    ],
+    123245678911 => [
+        'titular' => 'Maria',
+        'saldo' => 90000
+    ],
+    12345678912 => [
+        'titular' => 'Jose',
+        'saldo' => 900
+    ]
 ];
-$conta2 = [
-    'titular' => 'Maria',
-    'saldo' => 90000
-];
-$conta3 = [
-    'titular' => 'Jose',
-    'saldo' => 900
-];
 
-$contasCorrentes = [$conta1, $conta2, $conta3];
+//Utilizando foreach no php
 
-//Acessando dados com indices declarados (Arrays associativos)
-
-echo $conta2['titular'];
-
-
+foreach ($contasCorrentes as $chave => $conteudoChave) {
+       echo "$chave pertence a " . $contasCorrentes[$chave]['titular'] . PHP_EOL; 
+}
