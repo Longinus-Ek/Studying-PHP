@@ -27,7 +27,7 @@ $contasCorrentes = [
 //     0
 // );
 
-    unset ($contasCorrentes['123.456.689-11']);
+unset ($contasCorrentes['123.456.689-11']);
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +47,7 @@ $contasCorrentes = [
                 <h3><?= $conta['titular']; ?> - <?= $cpf; ?></h3>
             </dt>
             <dd>
-                 Saldo: <?= "R$ {$conta['saldo']} "; ?>
+                 Saldo: <?= "R$ " . number_format($conta['saldo'], 2, ',', ''); ?>
             </dd>
             <?php } ?>
         </dl>    
