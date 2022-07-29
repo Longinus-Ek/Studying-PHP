@@ -5,8 +5,8 @@ use App\Alura\usuario;
 
 require 'autoload.php';
 
-$usuario = new usuario($_POST['nome']);
-$contato = new contato($_POST['email'], $_POST['endereco'], $_POST['cep']);
+$usuario = new usuario($_POST['nome'], $_POST['senha']);
+$contato = new contato($_POST['email'], $_POST['endereco'], $_POST['cep'], $_POST['telefone']);
 
 ?>
 <!DOCTYPE html>
@@ -26,9 +26,9 @@ $contato = new contato($_POST['email'], $_POST['endereco'], $_POST['cep']);
 <ul class="list-group">
     <li class="list-group-item">Primeiro nome: <?php echo $usuario->getNome(); ?></li class="list-group-item">
     <li class="list-group-item">Sobrenome: <?php echo $usuario->getSobrenome(); ?></li class="list-group-item">
-    <li class="list-group-item">Usuário:<?php echo $contato->getUsuario(); ?> </li class="list-group-item">
-    <li class="list-group-item">Senha: </li class="list-group-item">
-    <li class="list-group-item">Telefone: </li class="list-group-item">
+    <li class="list-group-item">Usuário: <?php echo $contato->getUsuario(); ?> </li class="list-group-item">
+    <li class="list-group-item">Senha: <?php echo $usuario->getSenha(); ?> </li class="list-group-item">
+    <li class="list-group-item">Telefone: <?php echo $contato->getTelefone(); ?></li class="list-group-item">
     <li class="list-group-item">Email: <?php echo $contato->getEmail(); ?></li class="list-group-item">
     <li class="list-group-item">Endereço: <?php echo $contato->getEnderecoCep(); ?> </li class="list-group-item">
     <li class="list-group-item">CPF: </li class="list-group-item">
