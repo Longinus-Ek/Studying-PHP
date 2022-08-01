@@ -49,15 +49,7 @@
                 <label for="cep">CEP: </label>
                 <input type="text" id="cep" name="cep" class="form-control" placeholder="Digite o seu CEP">
             </div>
-            <div class="form-group">
-                <label for="cpf">CPF: </label>
-                <input type="text" id="cpf" name="cpf" class="form-control" placeholder="Digite o seu CPF">
-            </div>
-            <div class="form-group">
-                <label for="cpf">RG: </label>
-                <input type="text" id="rg" name="rg" class="form-control" placeholder="Digite o seu RG">
-            </div>
-
+         
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
     </div>
