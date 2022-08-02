@@ -7,9 +7,6 @@ use Alura\Banco\Modelo\Endereco;
 use Alura\Banco\Modelo\CPF;
 use Alura\Banco\Modelo\Conta\Conta;
 
-
-
-
 $endereco = new Endereco('Sao joão batista', 'Kalbarras', 'Presidente Ribeiro Silva', '403');
 $vinicius = new Conta (new Titular(new CPF('123.456.789-10'), 'Erick Dias', $endereco));
 
