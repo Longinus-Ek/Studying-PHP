@@ -2,6 +2,8 @@
 
 namespace Alura\Banco\Modelo\Conta;
 
+use Alura\Banco\Modelo\Conta\Titular;
+
 abstract class Conta
 {
     private $titular;
