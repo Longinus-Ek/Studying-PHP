@@ -1,11 +1,5 @@
 <?php   
 
-$arquivo = fopen('lista-cursos.txt', 'r');
+$cursos = file_get_contents('lista-cursos.txt');
 
-while (!feof($arquivo)){
-    $curso = fgets($arquivo);
-
-    echo $curso;
-}
-
-fclose($arquivo);
+echo $cursos;
