@@ -5,10 +5,10 @@ function funcao1()
     echo 'Entrei na função 1' . PHP_EOL;
     try{
     funcao2();
-    } catch (RuntimeException | DivisionByZeroError $erroOuExcecao){
-        echo $erroOuExcecao->getMessage(). PHP_EOL;
-        echo $erroOuExcecao->getLine(). PHP_EOL;
-        echo $erroOuExcecao->getTraceAsString(). PHP_EOL;
+    } catch (Error | Exception $errorOrException){
+        echo $errorOrException->getMessage(). PHP_EOL;
+        echo $errorOrException->getLine(). PHP_EOL;
+        echo $errorOrException->getTraceAsString(). PHP_EOL;
     }
 
     echo 'Saindo da função 1' . PHP_EOL;
